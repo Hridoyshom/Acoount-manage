@@ -15,23 +15,35 @@
     </Header>
     <main>
         <section>
-            <div class=" grid grid-cols-2">
+            <div class=" grid grid-cols-2 ">
                 <div>
                     <img class="w-3/4" src="images/cal.jpg" alt="">
                 </div>
 
 
-                <div>
-
+                <div class="block">
+                    <h1>income</h1>
                     Income: <input class="border-2 rounded" type="text " placeholder="input">
+                    <h1>expenses
+
+                    </h1>
+                    Food: <input id="input-food" class="border-2 rounded" type="text " placeholder="input">
+                    <div>Rent: <input id="input-rent" class="border-2 rounded" type="text " placeholder="input"></div>
+                    <div>Clothes: <input id="input-clothes" class="border-2 rounded" type="text " placeholder="input">
+                    </div>
+
+                    <button id="calculate-btn" class="bg-green-400">Calculate</button>
 
                 </div>
+
+
             </div>
 
         </section>
 
 
     </main>
+    <script src="money.js"></script>
 </body>
 
 </html>
