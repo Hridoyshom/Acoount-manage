@@ -44,4 +44,33 @@ document.getElementById('calculate-btn').addEventListener('click', function () {
     totalBalance.innerText = total;
 
 
+    document.getElementById('save-button').addEventListener('click', function () {
+
+
+        const saveInput = document.getElementById('save-input');
+        const saveInputText = saveInput.value;
+        const saveInputFinal = parseFloat(saveInputText);
+
+        const savingAmount = (total * (saveInputFinal / 100));
+
+        const remainingBalance = total - savingAmount;
+
+        // saving amount
+        const savingAmount1 = document.getElementById('saving-amount');
+
+        const savingAmountText = savingAmount1.innerText;
+
+        const savingAmount2 = parseFloat(savingAmountText);
+
+        savingAmount1.innerText = savingAmount;
+        const remainingBalanceFinal = document.getElementById('remaining-balance');
+
+        const remainingBalanceFinalText = remainingBalanceFinal.innerText;
+
+        remainingBalanceFinal.innerText = remainingBalance;
+
+
+
+
+    })
 })
