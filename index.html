@@ -15,15 +15,15 @@
     </Header>
     <main>
         <section>
-            <div class=" grid grid-cols-2 ">
+            <div class=" grid grid-cols-2  ">
                 <div>
                     <img class="w-3/4" src="images/cal.jpg" alt="">
                 </div>
 
 
-                <div class="block">
+                <div class="block bg-red-400 mx-8 p-5 ">
                     <h1>income</h1>
-                    Income: <input class="border-2 rounded" type="text " placeholder="input">
+                    Income: <input id="input-income" class="border-2 rounded" type="text " placeholder="input">
                     <h1>expenses
 
                     </h1>
@@ -33,6 +33,22 @@
                     </div>
 
                     <button id="calculate-btn" class="bg-green-400">Calculate</button>
+
+                    <div>
+
+                        <h1 class="inline">Total Expenses:</h1>
+                        <h1 class="inline block" id="total-expense">$00</h1>
+
+                    </div>
+
+
+                    <div>
+
+                        <h1 class="inline">Balance:</h1>
+                        <h1 class="inline block" id="total-balance"></h1>
+
+                    </div>
+
 
                 </div>
 
