@@ -6,18 +6,37 @@ document.getElementById('calculate-btn').addEventListener('click', function () {
     const costClothes = document.getElementById('input-clothes');
 
 
-
+    // inputcal
     const inputIncomeText = inputIncome.value;
     const inputCost = parseFloat(inputIncomeText);
 
+    if (inputCost < 0) {
+        alert("income must be greater than 0");
+    }
+
+    // food cost cal 
     const costFoodText = costFood.value;
     const foodCost = parseFloat(costFoodText);
+    if (foodCost < 0) {
+        alert("value can't be negative");
+    }
 
+    // rent cost cal 
     const costRentText = costRent.value;
     const rentCost = parseFloat(costRentText);
+    if (rentCost < 0) {
+        alert("value can't be negative");
+    }
 
+    // clothes cost cal 
     const costClothesText = costClothes.value;
     const clothesCost = parseFloat(costClothesText);
+
+    if (clothesCost < 0) {
+        alert("value can't be negative");
+    }
+
+
 
     const restExpense = (foodCost + rentCost + clothesCost);
 
@@ -25,7 +44,7 @@ document.getElementById('calculate-btn').addEventListener('click', function () {
 
     console.log(total);
 
-    // total cost calculation for show
+    // total cost cal
     const totalExpense = document.getElementById('total-expense');
 
     const remainingBalanceText = totalExpense.innerText;
@@ -42,6 +61,10 @@ document.getElementById('calculate-btn').addEventListener('click', function () {
     const balanceFinal = parseFloat(totalBalanceText);
 
     totalBalance.innerText = total;
+
+    if (totalExpense > inputCost) {
+        alert("Your expenses amount is larger than your inome");
+    }
 
 
     document.getElementById('save-button').addEventListener('click', function () {
